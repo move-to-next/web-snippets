@@ -1,0 +1,166 @@
+/* css 기본 설정 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.hidden{
+   width: 1px; 
+   height: 1px;
+   font-size: 1px;
+   margin: -1px;
+}
+
+/* main 콘텐츠 */
+main{
+    position: relative;
+    height: 100vh;
+}
+
+/* clip의 메뉴 */
+main > .clip-menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* clip 메뉴의 타이틀 */
+.clip-menu > .menu-title{
+    text-align: center;
+    font-family: "Noto Sans Kr";
+    font-size: 2em;
+    color: #444;
+}
+.clip-menu > .menu-sub-title{
+    text-align: center;
+    font-family: "Noto Sans Kr";
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 32px;
+}
+
+/* clip 메뉴 버튼 구현 */
+.clip-menu > ul{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+.clip-menu > ul > li{
+    width: 25vw;
+    background: #efe;
+    border-left: 1px solid #ddd;
+    transition: 0.3s;
+}
+.clip-menu > ul > li > a{
+    display: block;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.clip-menu > ul > li > a > i{
+    display: block;
+    font-size: 3em;
+    transition: 0.1s ease-out;
+}
+.clip-menu > ul > li > a > span{
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+/* 마우스 올릴 시 애니메이션 추가 */
+.clip-menu > ul > li > a:hover{
+    background-color: green;
+    transition: 0.3s ease-out;
+    color: #fff;
+}
+.clip-menu > ul > li > a:hover > i{
+    transform: translateY(-5%);
+    transition: 0.1s ease-out;
+}
+
+/* clip 메뉴의 세부리스트 */
+.clip-menu > .clip-menu-list{
+    margin-top: 20px;
+}
+.clip-menu-list > ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.clip-menu-list > ul > li{
+    width: 18vw;
+    background-color: #efe;
+    border: 1px solid #ddd;
+}
+.clip-menu-list > ul > li > a{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+/* clip-menu 세부리스트의 텍스트 부분 */
+.text-box{
+    padding: 20px;
+}
+.text-box > .tag{
+    display: inline-block;
+    background-color: skyblue;
+    padding: 1px 5px;
+}
+.text-box > .tag > span{
+    font-family: "Noto Sans Kr";
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #4d2eaa;
+}
+.text-box > .text{
+    padding: 10px 0;
+}
+.text-box > .text > p{
+    font-family: "Noto Sans Kr";
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.text-box > .text > span{
+    font-family: "Noto Sans Kr";
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #aaa;
+    word-break: break-all;
+}
+/* clip-menu 세부리스트의 이미지 부분 */
+.img-box{
+    position: relative;
+    height: 0;
+    padding-bottom: 60%;
+}
+.img-box > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.1s;
+}
+/* 마우스 올리면 애니메이션 추가 */
+.clip-menu-list > ul > li:hover img{
+    position: absolute;
+    transform: scale(1.2);
+    object-fit: cover;
+    transition: 0.1s;
+}
