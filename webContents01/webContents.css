@@ -108,9 +108,10 @@ main{
     margin: 0 10px;
     opacity: 50%;
 }
+.guri-news-menu > ul > li:hover{
+    opacity: 100%;
+}
 .guri-news-menu > ul > [li*=action]{
-    position: relative;
-    margin: 0 10px;
     opacity: 100%;
 }
 .guri-news-menu > ul > li::after{
