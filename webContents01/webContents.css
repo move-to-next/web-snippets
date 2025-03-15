@@ -17,7 +17,7 @@ main{
 }
 
 
-/* 구리시 뉴스 컨텐츠 설정 */
+/*** 구리시 뉴스 컨텐츠 설정 ***/
 .guri-news{
     position: absolute;
     width: 80%;
@@ -25,7 +25,7 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* 뉴스 콘텐츠 타이틀(TITLE) */
+/** 뉴스 콘텐츠 타이틀(TITLE) **/
 .guri-news > .guri-news-head{
     position: relative;
     display: flex;
@@ -33,50 +33,68 @@ main{
     align-items: flex-end;
 }
 /* 뉴스 타이틀 텍스트 */
-.guri-news-head > .guri-news-title{
+.guri-news-head > .news-head-title{
     position: relative;
 }
-.guri-news-title > h2{
+.news-head-title > h2{
     font-family: "S-Core Dream 8";
     font-size: 1.8em;
     letter-spacing: -1px;
 }
-.guri-news-title > span{
+.news-head-title > span{
     font-family: "S-Core Dream 3";
     font-size: 1em;
 }
 /* 뉴스 타이틀 더보기 */
-.guri-news-head > .guri-news-more{
+.guri-news-head > .news-head-more{
     position: relative;
     z-index: 1;
 }
-.guri-news-more > a{
+.news-head-more > a{
+    display: flex;
     z-index: 2;
 }
-.guri-news-more > a > span{
+.news-head-more > a > span{
     position: relative;
+    display: inline-block;
+    padding: 0 10px;
     font-family: "S-Core Dream 4";
     font-size: 1em;
     z-index: 3;
 }
-.guri-news-more > a > i{
-    font-size: 1.2em;
+.news-head-more > a > i{
+    position: relative;
+    display: block;
+    font-size: 1.5em;
     font-weight: 900;
+    z-index: 3;
 }
-.guri-news-more > a > span::after{
+.news-head-more > a > span::after{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-20%, -20%);
+    transform: translate(-10%, -15%);
     width: 45px;
     height: 32px;
     border-radius: 20px;
-    background-color: rgb(255, 224, 140);
+    background-color: #fe1;
     z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.news-head-more:hover > a > span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    transform: translate(510%, -15%);
+    width: 32px;
+    height: 32px;    
+    background-color: #fe1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
 }
 
-/* 뉴스 콘텐츠 메뉴(MENU) */
+/** 뉴스 콘텐츠 메뉴(MENU) **/
 .guri-news > .guri-news-menu{
     position: relative;
     margin-top: 5vh;
@@ -87,7 +105,13 @@ main{
 }
 .guri-news-menu > ul > li{
     position: relative;
-    margin: 0 20px;
+    margin: 0 10px;
+    opacity: 50%;
+}
+.guri-news-menu > ul > [li*=action]{
+    position: relative;
+    margin: 0 10px;
+    opacity: 100%;
 }
 .guri-news-menu > ul > li::after{
     content: '';
@@ -95,8 +119,120 @@ main{
     display: flex;
     justify-items: flex-end;
     top: 0;
-    right: -20%;
+    right: 0;
     width: 6px;
     height: 6px;
-    background-color: red;
+    border-radius: 20px;
+}
+.guri-news-menu > ul > li:nth-child(1)::after{
+    background-color: blueviolet;
+}
+.guri-news-menu > ul > li:nth-child(2)::after{
+    background-color: skyblue;
+}
+.guri-news-menu > ul > li:nth-child(3)::after{
+    background-color: orange;
+}
+.guri-news-menu > ul > li:nth-child(4)::after{
+    background-color: yellowgreen;
+}
+.guri-news-menu > ul > li:nth-child(5)::after{
+    background-color: salmon;
+}
+.guri-news-menu > ul > li:nth-child(6)::after{
+    background-color: burlywood;
+}
+.guri-news-menu > ul > li:nth-child(7)::after{
+    background-color: green;
+}
+.guri-news-menu > ul > li > a{
+    font-family: "S-Core Dream 4";
+    padding: 0 10px;
+}
+
+/** 뉴스 콘텐츠 카드(CARD) **/
+.guri-news > .guri-news-card{
+    position: relative;
+    margin-top: 5vh;
+}
+.guri-news-card > ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+/* 뉴스 카드의 내용 */
+.guri-news-card > ul > .news-card-list{
+    position: relative;
+    width: 19vw;
+    background-color: #eee;
+}
+.news-card-list > .card-list-contents{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 뉴스 카드 텍스트 */
+.card-list-contents > .list-contents-text{
+    position: relative;
+}
+.list-contents-text > .contents-text-title{
+    font-family: "S-Core Dream 6";
+    font-size: 1.2em;
+    line-height: 1.1em;
+    letter-spacing: -0.1em;
+    color: #000;
+    overflow: hidden;
+    max-height: 3.7em;
+    word-break: break-all;
+    margin-bottom: 2vh;
+    padding: 30px;
+}
+.list-contents-text > .contents-text-info{
+    font-family: "S-Core Dream 3";
+    font-size: 0.9em;
+    line-height: 1.2em;
+    letter-spacing: -0.1em;
+    color: #555;
+    padding: 0 30px;
+    overflow: hidden;
+    max-height: 2.4em;
+    line-height: 1.2em;
+}
+.list-contents-text::after{
+    content: '';
+    display: block;
+    width: 80%;
+    margin: 20px auto 0;
+    height: 1px;
+    background-color: #aaa;
+}
+/* 뉴스 카드 날짜 */
+.card-list-contents > .list-contents-term{
+    position: relative;
+    padding-bottom: 20px;
+}
+.list-contents-term > .contents-term-date{
+    position: relative;
+    padding: 30px;
+}
+.contents-term-date > i{
+    font-size: 0.8em;
+    color:#333;
+}
+.contents-term-date > span{
+    font-family: "S-Core Dream 3";
+    font-size: 0.9em;
+    color:#333;
+}
+.guri-news-card > ul > .news-card-list::after{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 1em;
+    background-color: #22f;
 }
