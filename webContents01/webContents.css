@@ -65,9 +65,11 @@ main{
 .news-head-more > a > i{
     position: relative;
     display: block;
+    bottom: 6px;
     font-size: 1.5em;
     font-weight: 900;
     z-index: 3;
+    transition: 0.3s ease-in-out;
 }
 .news-head-more > a > span::after{
     content: '';
@@ -93,6 +95,10 @@ main{
     z-index: -1;
     transition: 0.3s ease-in-out;
 }
+.news-head-more:hover > a > i{
+    color: #a0a;
+    transition: 0.3s ease-in-out;
+}
 
 /** 뉴스 콘텐츠 메뉴(MENU) **/
 .guri-news > .guri-news-menu{
@@ -111,7 +117,7 @@ main{
 .guri-news-menu > ul > li:hover{
     opacity: 100%;
 }
-.guri-news-menu > ul > [li*=action]{
+.guri-news-menu > ul > .action{
     opacity: 100%;
 }
 .guri-news-menu > ul > li::after{
@@ -166,6 +172,7 @@ main{
     position: relative;
     width: 19vw;
     background-color: #eee;
+    transition: 0.3s ease-in-out;
 }
 .news-card-list > .card-list-contents{
     position: relative;
@@ -188,6 +195,7 @@ main{
     word-break: break-all;
     margin-bottom: 2vh;
     padding: 30px;
+    transition: 0.3s ease-in-out;
 }
 .list-contents-text > .contents-text-info{
     font-family: "S-Core Dream 3";
@@ -207,6 +215,15 @@ main{
     margin: 20px auto 0;
     height: 1px;
     background-color: #aaa;
+}
+.guri-news-card > ul > .news-card-list:hover{
+    position: relative;
+    background-color: #dff;
+    transition: 0.3s ease-in-out;
+}
+.guri-news-card > ul > .news-card-list:hover > .card-list-contents > .list-contents-text > .contents-text-title{
+    color: #0ae;
+    transition: 0.3s ease-in-out;
 }
 /* 뉴스 카드 날짜 */
 .card-list-contents > .list-contents-term{
