@@ -52,28 +52,29 @@ main{
     width: 10vw;
     text-align: center;
 }
-.category-nav-list > a{
+.category-nav-list > .nav-list-text{
     display: block;
     background-color: #ddd;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
 }
-.category-nav-list > a > .nav-list-text{
+.category-nav-list > .nav-list-text > span{
     font-family: "Noto Sans KR";
     font-size: 1.1em;
     letter-spacing: -1px;
     font-weight: 400;
 }
 /* 목록 마우스오버시 */
-.category-nav-list:hover > a > .nav-list-text{
+.category-nav-list:hover > .nav-list-text > span{
     font-weight: 700;
 }
 /* 알림판 카테고리 목록이 활성화 되었을 때 */
-.category-nav-list[class*="action"] > a{
+.category-nav-list[class*="action"] > .nav-list-text{
     background-color: salmon;
     color: #fff;
 }
-.category-nav-list[class*="action"] > a > .nav-list-text{
+.category-nav-list[class*="action"] > .nav-list-text > span{
     font-weight: 700;
 }
 /** 카테고리 더보기 버튼 **/
