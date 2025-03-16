@@ -22,7 +22,7 @@ main{
     height: 100vh;
 }
 
-/*** 알림판 카테고리 메뉴 CSS ***/
+/**** 알림판 카테고리 메뉴 CSS ****/
 .category{
     position: absolute;
     top: 50%;
@@ -30,7 +30,7 @@ main{
     width: 40vw;
     transform: translate(-50%, -50%);
 }
-/** 알림판 카테고리 네비게이션 **/
+/*** 알림판 카테고리 네비게이션 ***/
 .category-nav{
     position: relative;
     display: flex;
@@ -45,7 +45,7 @@ main{
     width: 70%;
     justify-content: space-between;
 }
-/** 알림판 카테고리 버튼 스타일 설정 **/
+/** 알림판 카테고리 목록 스타일 설정 **/
 .category-nav > ul > .category-nav-list{
     position: relative;
     display: block;
@@ -64,7 +64,11 @@ main{
     letter-spacing: -1px;
     font-weight: 400;
 }
-/* 알림판 카테고리 버튼이 활성화 되었을 때 */
+/* 목록 마우스오버시 */
+.category-nav-list:hover > a > .nav-list-text{
+    font-weight: 700;
+}
+/* 알림판 카테고리 목록이 활성화 되었을 때 */
 .category-nav-list[class*="action"] > a{
     background-color: salmon;
     color: #fff;
@@ -72,7 +76,6 @@ main{
 .category-nav-list[class*="action"] > a > .nav-list-text{
     font-weight: 700;
 }
-
 /** 카테고리 더보기 버튼 **/
 .category-nav > button{
     position: absolute;
@@ -85,14 +88,23 @@ main{
     background-color: #ddd;
 }
 .category-nav > button > i{
+    display: inline-block;
     font-size: 2em;
     line-height: 6px;
+    transition: 0.8s;
 }
-/* 알림판 카테고리 콘텐츠 */
+/* 버튼 마우스오버시 */
+.category-nav > button:hover > i{
+    transform: rotate(360deg);
+    transition: 0.4s;
+}
+
+/*** 알림판 카테고리 콘텐츠 ***/
 .category-contents{
     display: flex;
     margin-top: 3vh;
 }
+/** 카테고리 콘텐츠 리스트 **/
 .category-contents > ul{
     position: relative;
     display: flex;
@@ -111,7 +123,7 @@ main{
 .category-contents > ul > li > a{
     display: flex;
     align-items: center;    
-    width: 80%;
+    width: 82%;
     padding: 8px 0;
 }
 .category-contents > ul > li > a::before{
@@ -129,6 +141,11 @@ main{
     font-weight: 600;
     letter-spacing: -1px;
 }
+/* 리스트 마우스 오버시 */
+.category-contents > ul > li:hover > a > .contents-list-text{
+    text-decoration: underline;
+}
+/** 카테고리 콘텐츠의 날짜 **/
 .category-contents > ul > li > .contents-list-date{
     display: inline-block;
 }
