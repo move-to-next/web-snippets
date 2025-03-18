@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.main-container{
+    position: relative;
+    display: flex;
+    top: 50%;
+    gap: 10px;
+    /* animation: rolling 2s linear infinite; */
+}
+.main-container-list{
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.main-container-list-banner{
+    position: relative;
+}
+.main-container-list-banner > a{
+    padding: 120px 200px;
+    background-color: salmon;
+}
+.main-container-list-banner > a > span{
+    font-size: 4em;
+}
+
+/* @keyframes rolling {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-89%);
+    }
+} */
