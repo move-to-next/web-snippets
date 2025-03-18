@@ -20,7 +20,7 @@ a{
     display: flex;
     top: 50%;
     gap: 10px;
-    /* animation: rolling 2s linear infinite; */
+    animation: rolling 2s linear infinite;
 }
 .main-container-list{
     position: relative;
@@ -38,11 +38,11 @@ a{
     font-size: 4em;
 }
 
-/* @keyframes rolling {
+@keyframes rolling {
     from{
         transform: translateX(0%);
     }
     to{
         transform: translateX(-89%);
     }
-} */
+}
