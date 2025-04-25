@@ -1,0 +1,106 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+};
+a{
+	text-decoration: none;
+	color: black;
+};
+body{
+    position: relative;
+    font-family: "Roboto", serif;
+    font-family: "Noto Sans KR", serif;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+.wrap{
+    position: relative;
+    margin: 0 auto;
+    background-color: #eeeeee;
+}
+.container{
+    padding: 500px 0 1000px;
+}
+.container .inner{
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+.container .inner .tit{
+    margin-bottom: 40px;
+}
+.container .inner .tit h2{
+    display: inline-block;
+    font-family: "Roboto";
+    font-size: 56px;
+    font-weight: 600;
+}
+.container .inner .tit h2::after{
+    content: '|';
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 100;
+    margin: 0 15px;
+}
+.container .inner .tit h3{
+    display: inline-block;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 300;
+    color: #777777;
+}
+
+.container .inner .cardBox{
+    perspective: 900px;
+}
+.container .inner .cardBox .uicard{
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 40px 60px;
+    margin-bottom: 50px;
+    border: 1px solid #777777;
+    box-shadow: 0 7px 7px #777777;
+}
+.container .inner .cardBox .uicard .cardTop{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.container .inner .cardBox .uicard .cardTop::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+.container .inner .cardBox .uicard .cardTop .tit{
+    display: flex;
+    align-items: flex-end;
+}
+.container .inner .cardBox .uicard .cardTop .tit .icon img{
+    width: 80px;
+}
+.container .inner .cardBox .uicard .cardTop .tit .text .sub{
+    display: block;
+    font-family: "Roboto", serif;
+    font-size: 20px;
+}
+.container .inner .cardBox .uicard .cardTop .icon{
+    display: flex;
+}
