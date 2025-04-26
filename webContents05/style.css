@@ -41,8 +41,10 @@ body{
     padding: 0 50px;
     box-sizing: border-box;
 }
-.container .inner .tit{
-    margin-bottom: 40px;
+.container .inner > .tit{
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 20px;
 }
 .container .inner .tit h2{
     display: inline-block;
@@ -75,23 +77,33 @@ body{
     margin-bottom: 50px;
     border: 1px solid #777777;
     box-shadow: 0 7px 7px #777777;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    filter: brightness(1);
 }
+
 .container .inner .cardBox .uicard .cardTop{
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 .container .inner .cardBox .uicard .cardTop::after{
     content: '';
     position: absolute;
     display: block;
     width: 100%;
+    transform: translateY(20px);
     border-bottom: 1px solid #000;
 }
 .container .inner .cardBox .uicard .cardTop .tit{
     display: flex;
     align-items: flex-end;
+}
+.container .inner .cardBox .uicard .cardTop .tit .icon{
+    margin-right: 16px;
 }
 .container .inner .cardBox .uicard .cardTop .tit .icon img{
     width: 80px;
@@ -101,6 +113,73 @@ body{
     font-family: "Roboto", serif;
     font-size: 20px;
 }
+.container .inner .cardBox .uicard .cardTop .tit .text .main{
+    display: block;
+    font-family: "Roboto", serif;
+    font-size: 45px;
+    font-weight: 800;
+}
 .container .inner .cardBox .uicard .cardTop .icon{
     display: flex;
+    gap: 10px;
+}
+.container .inner .cardBox .uicard .cardTop .icon div img{
+    width: 30px;
+}
+
+.container .inner .cardBox .uicard .cardBottom{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.container .inner .cardBox .uicard .cardBottom .info{
+    position: relative;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.container .inner .cardBox .uicard .cardBottom .info .text .tit{
+    display: block;
+    font-family: "Roboto", serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.container .inner .cardBox .uicard .cardBottom .info .text .txt{
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    word-break: break-all;
+}
+.container .inner .cardBox .uicard .cardBottom .info .btn{
+    position: relative;
+    width: fit-content;
+    padding: 20px 40px;
+    background-color: #000000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.container .inner .cardBox .uicard .cardBottom .info .btn .txt{
+    font-family: "Roboto", serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    user-select: none;
+}
+.container .inner .cardBox .uicard .cardBottom .image{
+    position: relative;
+    width: 50%;
+    height: 0;
+    padding-top: 30%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.container .inner .cardBox .uicard .cardBottom .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
