@@ -1,0 +1,7 @@
+.text{
+    display: block;
+    font-size: 60px;
+    font-weight: 800;
+    color: #ffffff;
+    -webkit-text-stroke:1px #000000;
+}
