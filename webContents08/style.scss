@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "S-CoreDream-3Light";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+*{
+  margin: 0;
+  padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "S-CoreDream-3Light";
+    height: 100vh;
+}
+section.focus-menu{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .focus-menu-header{
+        position: absolute;
+        width: 100%;
+        transform: translateY(-50%);
+        z-index: 600;
+        .focus-shortcut{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            button{
+                min-width: 7vw;
+                padding: 8px 0;
+                border: 1px solid #ddd;
+                border-radius: 40px;
+                background-color: #fff;
+                cursor: pointer;
+                span{
+                    font-family: "S-CoreDream-3Light";
+                    font-size: 1.2em;
+                    font-weight: 800;
+                    letter-spacing: -1px;
+                    color: #333;
+                }
+                &.action{
+                    background-color: #333;
+                    span{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .focus-menu-wrap{
+        position: relative;
+        width: 80%;
+        padding: 50px 20px;
+        border: 1px solid #ddd;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        z-index: 300;
+        .focus-menu-inner{
+            position: relative;
+            ul{
+                display: flex;
+                .focus-menu-item{
+                    width: 7vw;
+                    text-align: center;
+                    cursor: pointer;
+                    span{
+                        display: block;
+                        font-size: 0.9em;
+                        word-break: keep-all;
+                    }
+                    &:hover{
+                        img{
+                            transform: rotateY(360deg);
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+        .focus-menu-arrow{
+            position: absolute;
+            width: 100%;
+            height: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                padding: 20px;
+                border: none;
+                border-radius: 50%;
+                i{
+                    font-size: 1.5em;
+                }
+                &:hover{
+                    background-color: #333;
+                    i{
+                        color: #fff;
+                    }
+                }
+            }
+            .prev-arrow{
+                position: absolute;
+                left:2vw;
+            }
+            .next-arrow{
+                position: absolute;
+                right:2vw;
+            }
+        }
+    }
+}
